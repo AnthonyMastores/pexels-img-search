@@ -1,49 +1,89 @@
-body {
+
+* {
     margin:0;
     font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.app {
-    height: 100%;
-    width: 100%;
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
+    min-height: 10vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black ;
+    z-index: 1;
+    background: white;
 }
-
-.header {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.header h1 {
-    margin: 0 0 10px 0;
-}
-
-.header select {
+input {
+    padding: 0.5rem;
+    outline: none;
     font-size: 1rem;
 }
-.slideshow {
-    flex: 1;
-    background-color: #333;
-    position: relative;
-    overflow: hidden;
+.searchbutton {
+    padding: 0.5rem 3rem;
+    margin-left: 10px;
+    background: blue;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
 }
 
-.slide {
+.next {
+    position: fixed;
+    top: 90%;
+    right: 10%;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+.gallery {
+    width: 90%;
+    margin: 12vh 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(5,200px);
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.gallery div {
+    position: relative;
+}
+
+img {
+    margin-left: 5px;
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+p {
+    position: absolute;
+    margin-left: 10px;
+    color: white;
+}
+
+a {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    opacity: 0;
-    transform: scale(1);
-    transition: all .9s ease-out;
-}
-
-.slide:nth-last-child(2) {
-    opacity: 1;
-    transform-style: scale(1.08);
+    text-decoration: underline;
+    color:white;
+    margin-left: 10px;
+    font-weight: bold;
 }
