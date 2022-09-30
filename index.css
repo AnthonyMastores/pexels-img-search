@@ -1,14 +1,9 @@
 
-* {
-    margin:0;
-    font-family: sans-serif;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     min-height: 100vh;
     overflow-x: hidden;
+
 }
 
 .search {
@@ -17,19 +12,22 @@ body {
     left: 0;
     width: 100vw;
     display: flex;
-    min-height: 10vh;
+    min-height: 5vh;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black ;
     z-index: 1;
     background: white;
+    border-bottom: 1px solid black ;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 input {
     padding: 0.5rem;
     outline: none;
-    font-size: 1rem;
+    width: 350px;
+    font-size: 1.2rem;
 }
-.searchbutton {
+.sbutton {
     padding: 0.5rem 3rem;
     margin-left: 10px;
     background: blue;
@@ -48,34 +46,27 @@ input {
     text-align: center;
     cursor: pointer;
 }
-.gallery {
-    width: 90%;
+.photos {
     margin: 12vh 50%;
     transform: translateX(-50%);
     display: grid;
     grid-template-columns: repeat(5,200px);
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 20px;
+    column-gap: 20px;
     justify-content: center;
 }
 
-.gallery div {
+.photos div {
     position: relative;
 }
 
 img {
     margin-left: 5px;
-    height: 300px;
+    height: 350px;
     width: 200px;
     object-fit: cover;
     object-position: center;
     cursor: pointer;
-}
-
-p {
-    position: absolute;
-    margin-left: 10px;
-    color: white;
 }
 
 a {
@@ -83,7 +74,6 @@ a {
     top: 0;
     left: 0;
     text-decoration: underline;
-    color:white;
     margin-left: 10px;
     font-weight: bold;
 }

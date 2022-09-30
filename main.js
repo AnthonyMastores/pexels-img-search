@@ -1,6 +1,6 @@
 const next = document.querySelector(".next")
 const input = document.querySelector("input")
-const searchbutton = document.querySelector(".searchbutton")
+const searchbutton = document.querySelector(".sbutton")
 
 let pagenr = 1
 let search = false
@@ -21,16 +21,16 @@ async function SearchPhotos(query,pagenr) {
     result.photos.forEach((photo) => { 
         const pic = document.createElement("div")
         pic.innerHTML = `<img src=${photo.src.large}        >
-            <p>Photo: ${photo.photographer}</p>
-        <a href= ${photo.src.large}>Expand  </a>
+            
+        <a href= ${photo.src.large} target=_blank>Expand </a>
         `
-        document.querySelector(".gallery").appendChild(pic)
+        document.querySelector(".photos").appendChild(pic)
     }) 
 }
 
 function clear() {
     input.value =""
-    document.querySelector(".gallery").innerHTML = ""
+    document.querySelector(".photos").innerHTML = ""
     pagenr = 1
 }
 
